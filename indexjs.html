@@ -1,0 +1,87 @@
+<html>
+<head>
+    <script>
+function myfunction() {
+    document.getElementById("demo").innerHTML = "teksti vaihtui.";  
+}
+    </script>
+</head>
+<body>
+    <h1 id="myH"></h1>
+<p id="myP"></p>
+    <h2>Tässä on teksti, jonka väri vaihtuu, kun painat alhaalla olevaa pientä nappia</h2>
+    <button onclick="document.body.style.color = 'rgb(0, 0, 255)'"
+paina tästä, jotta tekstin väri vaihtuu
+<h5>Nappi</h5>
+</button>
+<h2>Alhaalla on nappi, joka muuttaa kappaleen sisällön</h2>
+<p id="demo">Alkuperäinen teksti</p>
+<button type="button" onclick="myfunction()">Kokeile</button>
+<hr>
+<p>JavaScriptin var, let ja const eroavat toisistaan näkyvyysalueen uudelleenmäärittelyn ja uudelleenjulistamisen suhteen. var on toiminnoltaan
+ rajattu ja sen voi uudelleenjulistaa, let on lohkoltaan rajattu ja sen arvon voi vaihtaa, mutta sitä ei voi uudelleenjulistaa, ja const on lohkoltaan rajattu, sen arvoa ei voi vaihtaa eikä sitä voi uudelleenjulistaa alkuperäisen määrityksen jälkeen.</p>
+<hr>
+ <p>Laita ikäsi ja paina nappia:</p>
+<input id="age" value="18" />
+
+<button onclick="myFunction()">kokeile</button>
+
+<p id="demo2"></p>
+
+
+    <script>
+        function myFunction() {
+  let voteable;
+  let age = Number(document.getElementById("age").value);
+  if (isNaN(age)) {
+    voteable = "Tämä ei ole ikä";
+  } else {
+    voteable = (age < 18) ? "Alaikäinen" : "Täysi-ikäinen";
+  }
+  document.getElementById("demo2").innerHTML = voteable;
+}
+    </script>
+    <p id="demo"></p>
+<hr>
+
+<p id="loop"></p>
+
+<script>
+let text = "";
+
+let i = 1;
+while (i < 6) {
+  text += "huhuu?! " + "<br>";
+  i++;
+}
+
+document.getElementById("loop").innerHTML = text;
+</script>
+<hr>
+<p id ="lista"></p>
+
+<script>
+const eläimet = ["koira", "kissa", "hevonen", "hiiri", "marsu"];
+let len = eläimet.length;
+    
+let teksti = "";
+for (let i = 0; i < len; i++) {
+    teksti += eläimet[i] + "!" + "<br>";
+}
+    
+document.getElementById("lista").innerHTML = teksti;
+ </script>
+
+<p id="tervehdys"></p>
+
+<script>
+function tervehdi(etunimi, sukunimi) {
+   return "hei " + etunimi + " " + sukunimi;
+}
+
+let tervehdys = tervehdi("Eelis", "Purtilo");
+document.getElementById("tervehdys").innerHTML = tervehdys;
+</script>
+
+</body>
+</html>
